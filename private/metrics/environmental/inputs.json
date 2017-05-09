@@ -1,0 +1,89 @@
+[
+  {
+    "category": "environmental",
+    "type": "input",
+    "title": "Greenhouse Gas Emissions",
+    "shorthand": "GHG Emissions",
+    "description": "The greenhouse gases (GHGs) emitted by the energy project, measured in tonnes of carbon dioxide equivalent (tCO<sub>2</sub>e). This can be calculated with a variety of sources, using a number of different emission factor methodologies which vary in accuracy depending on data availability. The default methodology employed is the UNFCCC Combined Margin approach.",
+    "unitType": "integer",
+    "sources": [
+      {
+        "description": "UNFCCC",
+        "url": "https://cdm.unfccc.int/methodologies/PAmethodologies/tools/am-tool-07-v4.0.pdf"
+      },
+      {
+        "description": "GHG Protocol",
+        "reference": "http://www.ghgprotocol.org/files/ghgp/electricity_final.pdf​"
+      }
+    ],
+    "units": "tons CO<sub>2</sub>e/year",
+    "selector": {
+      "type": "slider",
+      "step": 100,
+      "decimals": 0
+    },
+    "values": [
+      -120000,
+      -90000,
+      -60000,
+      -30000,
+      0,
+      30000,
+      60000,
+      90000,
+      120000,
+      150000
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]      
+  },
+  {
+    "category": "environmental",
+    "type": "input",
+    "title": "Type of Water Cooling Technology",
+    "shorthand": "Cooling",
+    "description": "Standards from the Cooling Technology Institute (CTI) address evaporative heat transfer systems, or cooling devices that use water as the substrate for cooling, as well as other forms of heat transfer equipment. This collection defines the manufacture, installation and use of this technology in numerous applications. The cooling technology is assessed in conjunction with the project location's hydrological state.",
+    "unitType": "string",
+    "sources": [
+      {
+        "description": "UNESCO",
+        "url": "http://www.unesco.org/new/fileadmin/MULTIMEDIA/HQ/SC/pdf/wwap_WWDR2_Section2_Global_Map3.pdf"
+      },
+      {
+        "description": "UCSUSA",
+        "url": "http://www.ucsusa.org/clean_energy/our-energy-choices/energy-and-water-use/water-energy-electricity-cooling-power-plant.html#.VFInKvnz2So"
+      }
+    ],
+    "selector": {
+      "type": "dropdown"
+    },
+    "values": [
+      "Open loop",
+      "Dry-cooling",
+      "Closed loop",
+      "No cooling technology"
+    ],
+    "descriptions": [
+      "An open loop system is the most inefficient cooling system.",
+      "Dry cooling systems use no water at all but might have negative effects on the plant's efficiency and have higher technology costs attached.",
+      "Closed-loop systems use substantially less water than open-loop systems and are therefore less harmful to the local watershed and environment.",
+      ""
+    ],
+    "points": [
+      1,
+      5,
+      8,
+      10
+    ]
+  }
+]

@@ -1,0 +1,60 @@
+/**
+ * REIA - MIT license
+ * https://github.com/cneuro/reia
+ * client
+ * @author Chris Nater
+ * */
+
+@import url('constants.less');
+
+.progress-bar {
+  background-color: @brand-primary-light;
+  font-weight: bold;
+}
+
+.chart {
+  display: block;
+  margin: auto;
+}
+
+.widget {
+  font-size: 120%;
+  strong {
+    font-size: 130%;
+  }
+  .well {
+    strong {
+      font-size: 160%;
+    }
+  }
+}
+
+.chart-legend {
+  font-size: 85%;
+  margin-top: 15px;
+  ul {
+    margin: auto;
+    width: 200px;
+    list-style: none;
+    li {
+      margin: 5px;
+      line-height: 15px;
+      span {
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        float: left;
+        margin-right: 3px;
+      }
+    }
+  }
+  &.chart-legend-horizontal {
+    ul {
+      width: auto;
+      text-align: center;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}

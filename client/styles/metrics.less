@@ -1,0 +1,119 @@
+/**
+ * REIA - MIT license
+ * https://github.com/cneuro/reia
+ * client
+ * @author Chris Nater
+ * */
+
+@import url('constants.less');
+@import url('mixins.less');
+
+.metric {
+  border-radius: 5px;
+  background-color: transparent;
+  &.highlight {
+    background-color: @brand-primary-lighter;
+  }
+  &.auto {
+    .metric-content {
+      display: none;
+    }
+  }
+  padding: 10px 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  .metric-header {
+    margin-bottom: 10px;
+    min-height: 35px;
+
+    .bootstrap-switch {
+      margin-left: 10px;
+
+      &.bootstrap-switch-animate .bootstrap-switch-container {
+        -webkit-transition: margin-left 0.25s;
+        -o-transition: margin-left 0.25s;
+        transition: margin-left 0.25s;
+      }
+
+      &.bootstrap-switch-small {
+        .bootstrap-switch-handle-on,
+        .bootstrap-switch-handle-off,
+        .bootstrap-switch-label {
+          padding: 3px 5px;
+        }
+      }
+
+      &:hover {
+        .bootstrap-switch-handle-off {
+          .gray-well();
+        }
+        .bootstrap-switch-handle-on {
+          -webkit-box-shadow: inset 0px 0px 10px 0px @brand-primary;
+          -moz-box-shadow: inset 0px 0px 10px 0px @brand-primary;
+          box-shadow: inset 0px 0px 10px 0px @brand-primary;
+        }
+      }
+      .bootstrap-switch-handle-on {
+        background-color: @brand-primary-light;
+      }
+      .bootstrap-switch-handle-off {
+        color: inherit;
+      }
+    }
+    .metric-title {
+      font-size: 115%;
+    }
+  }
+  .metric-radio {
+    margin: 5px 0;
+  }
+  .metric-slider {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    .noUi-handle, &.noUi-connect, .noUi-background, &.noUi-target {
+      box-shadow: none;
+    }
+    .noUi-handle, .noUi-base {
+      cursor: pointer;
+    }
+    .noUi-base:hover .noUi-handle {
+      .gray-relief();
+    }
+    &.noUi-connect {
+      background: @gray-lighter;
+    }
+    .noUi-pips {
+      font: inherit;
+      font-size: 80%;
+      &.noUi-pips-horizontal {
+        padding: 7px 0;
+        .noUi-value-horizontal {
+          padding-top: 10px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+          height: 7px;
+        }
+      }
+    }
+  }
+  .metric-display {
+    .form-control {
+      height: auto;
+      padding: 3px 12px;
+      color: inherit;
+    }
+    .metric-display-value-formatted {
+      cursor: pointer;
+      &:hover {
+        .gray-well();
+      }
+    }
+    .metric-display-value-raw {
+      max-width: 80px;
+    }
+  }
+  .select2-container {
+    margin-bottom: 10px;
+    width: 100% !important;
+  }
+}

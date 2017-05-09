@@ -1,0 +1,98 @@
+[
+  {
+    "type": "radar",
+    "category": "technical",
+    "label": "Metric Scores",
+    "function": "metrics",
+    "dim": {
+      "width": 460,
+      "height": 460,
+      "fullWidth": true
+    },
+    "contents": {
+      "datasets": [
+        {
+          "label": "main",
+          "fillColor": "rgba(224,211,76,0.5)",
+          "strokeColor": "rgba(224,211,76,0.7)",
+          "pointColor": "rgba(224,211,76,0.7)",
+          "pointStrokeColor": "rgba(224,211,76,1)",
+          "pointHighlightFill": "rgba(224,211,76,1)",
+          "pointHighlightStroke": "rgba(224,211,76,1)"
+        }
+      ]
+    }
+  },
+  {
+    "type": "radar",
+    "category": "financial",
+    "label": "Metric Scores",
+    "function": "metrics",
+    "dim": {
+      "width": 460,
+      "height": 460,
+      "fullWidth": true
+    },
+    "contents": {
+      "datasets": [
+        {
+          "label": "main",
+          "fillColor": "rgba(76,103,140,0.5)",
+          "strokeColor": "rgba(76,103,140,0.7)",
+          "pointColor": "rgba(76,103,140,0.7)",
+          "pointStrokeColor": "rgba(76,103,140,1)",
+          "pointHighlightFill": "rgba(76,103,140,1)",
+          "pointHighlightStroke": "rgba(76,103,140,1)"
+        }
+      ]
+    }
+  },
+  {
+    "type": "radar",
+    "category": "environmental",
+    "label": "Metric Scores",
+    "function": "metrics",
+    "dim": {
+      "width": 460,
+      "height": 460,
+      "fullWidth": true
+    },
+    "contents": {
+      "datasets": [
+        {
+          "label": "main",
+          "fillColor": "rgba(60,136,128,0.5)",
+          "strokeColor": "rgba(60,136,128,0.7)",
+          "pointColor": "rgba(60,136,128,0.7)",
+          "pointStrokeColor": "rgba(60,136,128,1)",
+          "pointHighlightFill": "rgba(60,136,128,1)",
+          "pointHighlightStroke": "rgba(60,136,128,1)"
+        }
+      ]
+    }
+  },
+  {
+    "type": "radar",
+    "category": "socioeconomic",
+    "label": "Metric Scores",
+    "function": "metrics",
+    "dim": {
+      "width": 460,
+      "height": 460,
+      "fullWidth": true
+    },
+    "contents": {
+      "datasets": [
+        {
+          "label": "main",
+          "fillColor": "rgba(170,58,57,0.5)",
+          "strokeColor": "rgba(170,58,57,0.7)",
+          "pointColor": "rgba(170,58,57,0.7)",
+          "pointStrokeColor": "rgba(170,58,57,1)",
+          "pointHighlightFill": "rgba(170,58,57,1)",
+          "pointHighlightStroke": "rgba(170,58,57,1)"
+        }
+      ]
+    }
+  }
+]

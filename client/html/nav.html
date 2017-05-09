@@ -1,0 +1,49 @@
+<template name="nav">
+  <nav id="navBar" class="navbar navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="pull-left">
+        <h1>
+          <img height=40 width=40 src="/logos/logo.png"/>
+          &nbsp;REIA
+        </h1>
+        <button type="button" class="navbar-toggle btn btn-primary collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicon glyphicon-th-list"></span>
+        </button>
+        &nbsp;<span>v0.1</span>
+      </div>
+      <div id="nav-collapse" class="pull-right navbar-collapse collapse">
+        <ul class="nav nav-pills">
+          <li class="{{active 'configuration'}}" data-toggle="tooltip" data-placement="bottom" data-title="Configuration">
+            <a href="/configuration" data={{reactiveVar 'currentProject'}} class={{navActive}}>
+              <span class="glyphicon glyphicon-wrench"></span>
+            </a>
+          </li>
+          <li class="{{active 'project'}}" data-toggle="tooltip" data-placement="bottom" data-title="Project">
+            <a href="/project" data={{reactiveVar 'currentProject'}} class={{navActive}}>
+              <span class="glyphicon glyphicon-edit"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {{> aboutModal}}
+</template>
+
+<template name="aboutModal">
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h3 class="modal-title" id="aboutModalLabel">REIA</h3>
+        </div>
+        <div class="modal-body">
+          <h4>Concept</h4>
+          <h4>Creators</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

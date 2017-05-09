@@ -1,0 +1,23 @@
+<template name="ratings">
+  {{#each metrics}}
+    <div class="col-xs-6">
+      <div class="panel panel-default {{this}}-color-semi-bg">
+        <div class="panel-body">
+          <span class="pull-left">
+            {{capitalize this}}
+          </span>
+          <span class="pull-right">
+            <strong>{{rating this}}</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+  <div class="col-xs-12">
+    <div class="well text-center">
+      Overall
+      <br>
+      <strong>{{rating 'summary'}}</strong>
+    </div>
+  </div>
+</template>

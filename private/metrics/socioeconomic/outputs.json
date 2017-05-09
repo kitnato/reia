@@ -1,0 +1,50 @@
+[
+  {
+    "category": "socioeconomic",
+    "type": "output",
+    "title": "Energy Affordability",
+    "shorthand": "Affordability",
+    "description": "The average price per Kilowatt-hours for which electricity is sold to the consumer.",
+    "sources": [
+      {
+        "description": "IEA",
+        "url": "http://www.iea.org/topics/energypoverty/"
+      },
+      {
+        "description": "ESAN",
+        "url": "http://www.esan.org.uk/wp-content/uploads/Tackling-Consumer-Vulnerability-Briefing-Paper-.pdf"
+      }
+    ],
+    "units": "pence/kWh sold",
+    "selector": {
+      "type": "slider",
+      "step": 0.1,
+      "decimals": 1
+    },
+    "unitType": "float",
+    "values": [
+      2.6,
+      5.2,
+      7.8,
+      10.4,
+      13,
+      15.6,
+      18.2,
+      20.8,
+      23.4,
+      26
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  }
+]

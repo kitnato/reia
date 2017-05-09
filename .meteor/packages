@@ -1,0 +1,37 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+less@2.7.9
+
+chart:chart
+rcy:nouislider
+underscorestring:underscore.string
+aldeed:template-extension
+zimme:select2-bootstrap3-css
+natestrauser:animate-css
+reactive-dict@1.1.8
+ctjp:meteor-bootstrap-switch
+button:select2
+meteor-base@1.0.4
+mobile-experience@1.0.4
+mongo@1.1.17
+blaze-html-templates
+session@1.1.7
+jquery@1.11.10
+tracker@1.1.3
+logging@1.1.17
+reload@1.1.11
+random@1.0.10
+ejson@1.0.13
+spacebars
+check@1.2.5
+peerlibrary:fs
+reactive-var@1.0.11
+standard-minifier-css@1.3.4
+standard-minifier-js@2.0.0
+shell-server@0.2.3
+huttonr:bootstrap3
+kadira:flow-router
+kadira:blaze-layout

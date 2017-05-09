@@ -1,0 +1,262 @@
+<template name="configuration">
+  <div class="container section">
+    <h2>
+      Configuration
+    </h2>
+    <h5>
+      Settings for metrics
+      <a tabindex="0" role="button" data-trigger="focus" data-toggle="popover" data-popover-class="popover-large" data-popover-template="howToUseConfiguration" data-placement="right" title="How to use">
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </a>
+    </h5>
+  </div>
+  <div class="container section">
+    <div class="pane pane-configuration">
+      {{#if Template.subscriptionsReady}}
+        {{> configurationMetricsSummary}}
+        {{> tabs type='configuration' categoriesType='metric'}}
+      {{else}}
+        {{> loading}}
+      {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name="configurationTabContent">
+  {{#each metricTypes}}
+    <h4 style="margin: 2em 0 1em 0;">{{capitalize this}}s</h4>
+    {{#each metrics ../category this}}
+      <div class="panel panel-default">
+        {{> configurationMetricsPanelTitle}}
+        {{#if active}}
+          {{> configurationMetricsPanelBody}}
+        {{/if}}
+      </div>
+    {{/each}}
+  {{/each}}
+</template>
+
+<template name="configurationMetricsSummary">
+  <div id="configuration-metrics-summary" class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Summary
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        {{#each withIndex columns}}
+          <div class="{{#if isEq index 0}}col-xs-offset-3 {{/if}}col-xs-3 text-center">
+            <h5>{{value}}</h5>
+            <div class="row">
+              {{#each subColumns}}
+                <div class="col-xs-4 text-center">
+                  {{this}}
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+      {{#each categories 'metric'}}
+        <div class="row">
+          <div class="col-xs-3 text-right">
+            {{capitalize this}}
+          </div>
+          {{#each activeSwitches}}
+            <div class="col-xs-3 text-center">
+              <div class="row">
+                <div class="col-xs-4 text-center">
+                  <span class="badge metric-category-{{..}}">
+                    {{collectionCount (metrics .. null this)}}
+                  </span>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <span class="badge metric-category-{{..}}">
+                    {{collectionCount (metrics .. 'input' this)}}
+                  </span>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <span class="badge metric-category-{{..}}">
+                    {{collectionCount (metrics .. 'output' this)}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
+      <div class="row">
+        <div class="col-xs-3 text-right">
+          All categories
+        </div>
+        {{#each activeSwitches}}
+          <div class="col-xs-3 text-center">
+            <div class="row">
+              <div class="col-xs-4 text-center">
+                <span class="badge">
+                  {{collectionCount (notBasic null this)}}
+                </span>
+              </div>
+              <div class="col-xs-4 text-center">
+                <span class="badge">
+                  {{collectionCount (notBasic 'input' this)}}
+                </span>
+              </div>
+              <div class="col-xs-4 text-center">
+                <span class="badge">
+                  {{collectionCount (notBasic 'output' this)}}
+                </span>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="configurationMetricsPanelTitle">
+  <div class="panel-heading metric-category-{{category}}">
+    <div class="panel-title">
+      {{title}}
+      {{#if isEq active false}}
+        [DEACTIVATED]
+      {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name="configurationMetricsPanelBody">
+  <div class="panel-body">
+    <form class="configuration-metric-form" data-metric-id="{{_id}}">
+      <div class="form-group col-xs-12 col-sm-6">
+        {{> configurationMetricsForm}}
+      </div>
+      <div class="form-group col-xs-12 col-sm-6">
+        {{> configurationMetricsScoringForm}}
+      </div>
+    </form>
+  </div>
+</template>
+
+<template name="configurationMetricsForm">
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon" data-toggle="popover" data-popover-template="descTitle" data-trigger="hover focus">Title</span>
+      <input type="text" value="{{title}}" class="form-control configuration-metric-input" disabled="disabled">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon" data-toggle="popover" data-popover-template="descShorthand" data-trigger="hover focus">Shorthand</span>
+      <input type="text" value="{{shorthand}}" class="form-control configuration-metric-input" disabled="disabled">
+    </div>
+  </div>
+  {{#if units}}
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon" data-toggle="popover" data-popover-template="descUnits" data-trigger="hover focus">Units</span>
+        <input type="text" value="{{units}}" class="form-control configuration-metric-input" disabled="disabled">
+      </div>
+    </div>
+  {{/if}}
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon" data-toggle="popover" data-popover-template="descDescription" data-trigger="hover focus">Description</span>
+      <textarea class="form-control" rows="3" disabled="disabled">{{description}}</textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon" data-toggle="popover" data-popover-template="descWeight" data-trigger="hover focus">Weight</span>
+      <input type="number" step="1" min="0" max="10" value="{{weight}}" class="form-control configuration-metric-input" disabled="disabled">
+    </div>
+  </div>
+  {{#if isEq type 'output'}}
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon" data-toggle="popover" data-popover-template="descCalculation" data-trigger="hover focus">Calculation</span>
+        <input type="text" value="{{calculation.equation}}" class="form-control configuration-metric-input" disabled="disabled">
+      </div>
+    </div>
+  {{/if}}
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon" data-toggle="popover" data-popover-template="descSelector" data-trigger="hover focus">Selector</span>
+      <input type="text" value="{{selector.type}}" class="form-control configuration-metric-input" disabled="disabled">
+    </div>
+  </div>
+</template>
+
+<template name="configurationMetricsScoringForm">
+  {{#if isEq selector.type 'slider'}}
+    <div class="metric-configuration-scoring">
+      <div class="col-xs-5">
+        <div class="form-group">
+          <span class="input-group-addon input-group-addon-alone" data-toggle="popover" data-popover-template="descValues" data-placement="bottom" data-trigger="hover focus">Values</span>
+        </div>
+      </div>
+      <div class="col-xs-1"></div>
+      <div class="col-xs-5">
+        <div class="form-group">
+          <span class="input-group-addon input-group-addon-alone" data-toggle="popover" data-popover-template="descPoints" data-placement="bottom" data-trigger="hover focus">Points</span>
+        </div>
+      </div>
+      {{#each withIndex values}}
+        <div class="col-xs-5">
+          <div class="form-group">
+            <input type="number" value="{{value}}" class="form-control text-center" disabled="disabled">
+          </div>
+        </div>
+        <div class="col-xs-1">
+          <div style="padding-top: 5px;">
+            <span class="glyphicon glyphicon-resize-horizontal"></span>
+          </div>
+        </div>
+        <div class="col-xs-5">
+          <div class="form-group">
+            <input type="number" value="{{points}}" class="form-control text-center" disabled="disabled">
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</template>
+
+<template name="descTitle">
+  The full title of the metric.
+</template>
+<template name="descShorthand">
+  An abbreviated title of the metric, used for long titles when displayed on graph axes.
+</template>
+<template name="descUnits">
+  The units of the values of this metric. Accepts HTML tags for special markup, e.g. "CO&lt;sub&gt;2&lt;/sub&gt;" becomes "CO<sub>2</sub>".
+</template>
+<template name="descDescription">
+  The description of the metric, showing sources, explaining methodology etc. Accepts HTML tags for special markup, e.g. "CO&lt;sub&gt;2&lt;/sub&gt;" becomes "CO<sub>2</sub>".
+</template>
+<template name="descWeight">
+  The percentage coefficient of the metric relative to the others in its category when calculating the average weighted mean of the category score.<br><span class="italic">Not available in v0.1.</span>
+</template>
+<template name="descSelector">
+  The type of selection mechanism for the metric. Can be of type 'slider', 'dropdown' or 'radio'.
+</template>
+<template name="descValues">
+  The values of the metric's units corresponding to a one-to-one mapping of an equivalent point score. Unit values falling in between the point mappings are linearly interpolated.
+</template>
+<template name="descPoints">
+  The score (0 to 10) of the metric's points corresponding to a one-to-one mapping of an equivalent unit value. Unit values falling in between the point mappings are linearly interpolated.
+</template>
+<template name="descCalculation">
+  The output metric's equation for automation, expressed in custom camelCase syntax. If defined, the metric is automatable on the project UI with a switch.
+</template>
+
+<template name="howToUseConfiguration">
+  <p>
+    These values in this UI are for presentation purposes only. To amend any detail, the metric input files must be modified by hand. They are found ordered by category and input/output under private/metrics/.
+  </p>
+  <p>
+    For further details on any of the metric fields, the field descriptors can be hovered over or tapped.
+  </p>
+</template>

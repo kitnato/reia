@@ -1,0 +1,181 @@
+[
+  {
+    "category": "technical",
+    "type": "input",
+    "title": "Nameplate Capacity",
+    "description": "Nameplate capacity, also known as the rated capacity or installed capacity refers to the intended technical full-load sustained output of a power plant.",
+    "sources": [
+      {
+        "description": "Open EI",
+        "url": "http://en.openei.org/wiki/Definition:Nameplate_Capacity"
+      }
+    ],
+    "units": "MW",
+    "selector": {
+      "type": "slider",
+      "step": 10,
+      "decimals": 0
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "integer",
+    "values": [
+      1,
+      20,
+      70,
+      130,
+      200,
+      250,
+      300,
+      350,
+      400,
+      500
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "input",
+    "title": "Capacity Factor",
+    "description": "The capacity factor is the ratio of the actual output over a period of one year and its output if it had operated at nominal power the entire year.",
+    "sources": [
+      {
+        "description": "GHG Protocol",
+        "url": "http://www.ghgprotocol.org/files/ghgp/electricity_final.pdf​"
+      },
+      {
+        "description": "IFC",
+        "url": "http://www.ifc.org/wps/wcm/connect/topics_ext_content/ifc_external_corporate_site/ifc+sustainability/learning+and+adapting/knowledge+products/publications/publications_handbook_solarpowerplants"
+      }
+    ],
+    "units": "%",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "integer",
+    "values": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      50
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "input",
+    "title": "Useful Life",
+    "description": "Expected period that the asset will reliably generate electricity.",
+    "sources": [
+      {
+        "description": "GHG Protocol",
+        "url": "http://www.ghgprotocol.org/files/ghgp/electricity_final.pdf​"
+      }
+    ],
+    "units": "years",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      0,
+      2,
+      7,
+      12,
+      17,
+      22,
+      27,
+      32,
+      37,
+      40
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "input",
+    "title": "Distance from Power Generator to Load",
+    "shorthand": "Distance",
+    "active": false,
+    "description": "The distance in kilometers between the electricity generating project and the nearest point of consumption.",
+    "units": "kilometers",
+    "selector": {
+      "type": "slider",
+      "step": 1
+    },
+    "unitType": "integer",
+    "values": [
+      1,
+      3,
+      6,
+      10,
+      40,
+      80,
+      120,
+      160,
+      180,
+      200
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  }
+]

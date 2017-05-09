@@ -1,0 +1,43 @@
+[
+  {
+    "type": "polar-area",
+    "category": "summary",
+    "function": "summary",
+    "label": "Overview",
+    "order": 1,
+    "legend": {
+      "spread": "horizontal",
+      "orientation": "bottom"
+    },
+    "dim": {
+      "width": 400,
+      "height": 400
+    },
+    "contents": [
+      {
+          "value": 0,
+          "color": "rgba(224,211,76,0.65)",
+          "highlight": "rgba(224,211,76,0.95)",
+          "label": "Technical"
+      },
+      {
+          "value": 0,
+          "color": "rgba(76,103,140,0.65)",
+          "highlight": "rgba(76,103,140,0.95)",
+          "label": "Financial"
+      },    
+      {
+          "value": 0,
+          "color": "rgba(60,136,128,0.65)",
+          "highlight": "rgba(60,136,128,0.95)",
+          "label": "Environmental"
+      },
+      {
+          "value": 0,
+          "color": "rgba(170,58,57,0.65)",
+          "highlight": "rgba(170,58,57,0.95)",
+          "label": "Socioeconomic"
+      }     
+    ]
+  }
+]

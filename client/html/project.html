@@ -1,0 +1,138 @@
+<template name="project">
+  <div class="container section">
+    <h2>
+      Project
+    </h2>
+    <h5>
+      Details, metric data and ratings
+      <a tabindex="0" role="button" data-trigger="focus" data-toggle="popover" data-popover-class="popover-large" data-popover-template="howToUseProject" data-placement="bottom" title="How to use">
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </a>
+    </h5>
+  </div>
+  <div class="container section">
+    {{#if Template.subscriptionsReady}}
+      {{> tabs type='project' badge=true}}
+    {{else}}
+      {{> loading}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="projectTabBadge">
+  {{#if ready}}
+    <span class="glyphicon glyphicon-ok-sign"></span>
+  {{else}}
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+  {{/if}}
+</template>
+
+<template name="projectTabContent">
+  <div class="notification-container"></div>
+  {{#if isEq category 'summary'}}
+    <div class="pane pane-charts">
+      {{> chartsPane showLabel=true}}
+    </div>
+  {{else}}
+    {{#if isEq category 'basic'}}
+      <div class="pane pane-metrics">
+        {{> basicPane}}
+      </div>
+    {{else}}
+      <div class="pane alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Notice - </strong>Manual metrics in this category are initialised to default values.
+      </div>
+      <div class="pane pane-charts">
+        {{> chartsPane}}
+      </div>
+      <div class="pane pane-metrics">
+        {{> metricsPane}}
+      </div>
+    {{/if}}
+  {{/if}}
+  {{> projectNavButtons}}
+</template>
+
+<template name="tabPaneNotification">
+  <div class="pane alert alert-{{type}} {{#if dismissable}}alert-dismissible{{/if}}" role="alert">
+    {{#if dismissable}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    {{/if}}
+    {{#if header}}
+      <strong>{{header}} - </strong>
+    {{/if}}
+    {{message}}
+  </div>
+</template>
+
+<template name="projectNavButtons">
+  <div class="col-xs-12">
+    <hr>
+  </div>
+  <div class="col-xs-12 pane-buttons">
+    {{#if isEq category 'basic'}}
+      {{> projectNavButton size='12' direction='next'}}
+    {{else}}
+      {{#if isEq category 'summary'}}
+        {{> projectNavButton size='12' direction='previous'}}
+      {{else}}
+        {{> projectNavButton size='6' direction='previous'}}
+        {{> projectNavButton size='6' direction='next'}}
+      {{/if}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="projectNavButton">
+  <div class="col-xs-12 col-sm-{{size}}">
+    <button type="button" class="btn btn-default btn-lg btn-block {{direction}}-category">
+      {{#if isEq direction 'previous'}}
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&nbsp;
+      {{/if}}
+      {{capitalize direction}}
+      {{#if isEq direction 'next'}}
+        &nbsp;<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      {{/if}}
+    </button>
+  </div>
+</template>
+
+<template name="howToUseProject">
+  <p>
+    If a category tab has a <span class="glyphicon glyphicon-exclamation-sign"></span> badge, it is yet to be visited and at least initialised so that the category contributes to the rating (<span class="glyphicon glyphicon-ok-sign"></span>).
+  </p>
+  <h5>
+    Metrics
+  </h5>
+  <ul>
+    <p>
+      Hover over or tap each metric title for an explanation of the input, along with its source(s).
+    </p>
+    <li>Inputs &amp; manual outputs</li>
+    <ul>
+      <li>Adjust sliders or input numeric values manually by clicking or tapping on a number label.</li>
+      <li>Click or tap appropriate option in a radio selector.</li>
+      <li>Choose from available options in a drop-down menu.</li>
+      <li>Output metrics frozen in "Manual" do not have an automatable formula.</li>
+    </ul>
+    <li>Automated outputs</li>
+    <ul>
+      <li>Metrics that can be readily automated default to "Auto" mode.</li>
+      <li>Metrics in Auto mode are recalculated in real-time as other metrics are changed.</li>
+      <li>To switch between Auto or Manual mode, tap or click the switch next to the metric title.</li>
+    </ul>
+  </ul>
+
+  <h5>Scoring &amp; Ratings</h5>
+  <p>
+    All metrics in each of the four category tabs are scored from 1 to 10, with 10 having the highest estimated net-positive return on investment in that category based on the current configuration.
+  </p>
+  <p>
+    The Summary tab shows gives a single score per category, similarly from 1 to 10. There is also a rating for each category ranging from "A" to "F", with A signifying an estimated highly desirable outcome in that category, and F signaling room for improvement.
+  </p>
+</template>

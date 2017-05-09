@@ -1,0 +1,259 @@
+[
+  {
+    "category": "financial",
+    "type": "input",
+    "title": "Capital expenditure",
+    "shorthand": "CAPEX",
+    "description": "Total costs include the cost of land, PV modules, mounting structure, inverters, balance of plant and support infrastructure, and start-up costs.",
+    "units": "mn $",
+    "selector": {
+       "type": "slider",
+       "step": 1,
+       "decimals": 0
+    },
+    "multiplier": 1000000,
+    "unitType": "integer",
+    "values": [
+      1,
+      50,
+      100,
+      150,
+      200,
+      250,
+      300,
+      350,
+      400,
+      500
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]    
+  },
+  {
+    "category": "financial",
+    "type": "input",
+    "active": false,
+    "title": "Operating Cash Flow Ratio",
+    "shorthand": "OCFR",
+    "description": "OCFR is defined as cash flow from operations/current liabilities. The OCFR provides information about the short-term financial health (liquidity and solvability) of projects which are incorporated in business.",
+    "units": "ratio",
+    "selector": {
+      "type": "slider",
+      "step": 5,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "financial",
+    "type": "input",
+    "title": "Price Per kWh",
+    "description": "Besides the power generated, project revenue is dependent upon the power price. This may be fixed or variable according to the time of day or year, and must be clearly stipulated in the power purchase agreement.",
+    "sources": [
+      {
+        "description": "IFC",
+        "url": "http://www.ifc.org/wps/wcm/connect/topics_ext_content/ifc_external_corporate_site/ifc+sustainability/learning+and+adapting/knowledge+products/publications/publications_handbook_solarpowerplants"
+      }
+    ],
+    "units": "$",
+    "selector": {
+      "type": "slider",
+      "step": 0.01,
+      "decimals": 2
+    },
+    "unitType": "float",
+    "values": [
+      0.05,
+      0.07,
+      0.09,
+      0.11,
+      0.13,
+      0.15,
+      0.17,
+      0.19,
+      0.22,
+      0.25
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "financial",
+    "type": "input",
+    "title": "Fixed Operations & Maintenance Costs",
+    "shorthand": "FOMC",
+    "description": "The fixed cost for operating and maintaining an asset.",
+    "sources": [
+      {
+        "description": "NREL",
+        "url": "http://www.nrel.gov/analysis/tech_lcoe.html"
+      }
+    ],
+    "units": "$/kW-year",
+    "selector": {
+      "type": "slider",
+      "step": 0.01,
+      "decimals": 2
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "float",
+    "values": [
+      0.01,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1,
+      1.2,
+      1.4,
+      1.6,
+      2
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "financial",
+    "type": "input",
+    "title": "Other Operations & Maintenance Costs",
+    "shorthand": "OOMC",
+    "description": "The fixed cost for operating and maintaining an asset.",
+    "sources": [
+      {
+        "description": "NREL"
+      }
+    ],
+    "units": "$/kW-year",
+    "selector": {
+      "type": "slider",
+      "step": 0.01,
+      "decimals": 2
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "float",
+    "values": [
+      0.01,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1,
+      1.2,
+      1.4,
+      1.6,
+      2
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "financial",
+    "type": "input",
+    "title": "Discount Rate",
+    "description": "Typically a set rate by the US Federal Reserve at around 2.5 to 3% for energy projects.",
+    "units": "%",
+    "selector": {
+      "type": "slider",
+      "step": 0.01,
+      "decimals": 2
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "integer",
+    "values": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      20
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  }
+]

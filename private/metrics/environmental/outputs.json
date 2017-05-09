@@ -1,0 +1,383 @@
+[
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Impact on Local Landscape",
+    "shorthand": "Local Landscape",
+    "description": "Describes the project's impacts on the local landscape across different criteria.",
+    "active": false,
+    "unitType": "string",
+    "selector": {
+      "type": "radio"
+    },
+    "radios": [
+      {
+        "label": "Immediacy",
+        "values": [
+          "Direct",
+          "Indirect"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Accumulation",
+        "values": [
+          "Cumulative",
+          "Simple"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Persistence",
+        "values": [
+          "Permanent",
+          "Temporary"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Reversibility",
+        "values": [
+          "Irreversible",
+          "Reversible"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Continuity",
+        "values": [
+          "Continuous",
+          "Non-continuous"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      }
+    ],
+    "results": {
+      "values": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "points": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ]
+    }
+  },
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Carbon Payback Period",
+    "active": false,
+    "shorthand": "Carbon PBP",
+    "description": "",
+    "units": "PBP in years",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]       
+  },
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Energy Payback Period",
+    "active": false,    
+    "shorthand": "Energy PBP",
+    "description": "",
+    "units": "PBP in years",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Quantity of Water Used",
+    "shorthand": "Water Use",
+    "description": "An indicator of freshwater use that incorporates both direct and indirect water use of a consumer or producer, defined as the total volume of freshwater used to produce the goods and services consumed by the individual or community or produced by the business. Water use is measured in terms of water volumes consumed (evaporated or incorporated into a product) and/or polluted per unit of time.",
+    "sources": [
+      {
+        "description": "U.S. Environmental Protection Agency",
+        "url": "http://www.epa.gov/waters/tmdldocs/39311_39311_MinnowCk_DO.pdf"
+      },
+      {
+        "description": "Water Footprint Network",
+        "url": "http://waterfootprint.org/en/water-footprint/glossary/"
+      }
+    ],
+    "units": "m<sup>3</sup>",
+    "selector": {
+      "type": "slider",
+      "step": 100,
+      "decimals": 0
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "integer",
+    "values": [
+      0,
+      5000,
+      10000,
+      15000,
+      20000,
+      25000,
+      30000,
+      35000,
+      40000,
+      45000
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Water Pollution Level",
+    "shorthand": "Water Pollution",
+    "description": "The degree of pollution of the run-off flow, measured as the fraction of the waste assimilation capacity of runoff actually consumed. A water pollution level of 100% means the waste assimilation capacity of the runoff flow has been fully consumed.",
+    "sources": [
+      {
+        "description": "U.S. Environmental Protection Agency",
+        "reference": "http://www.epa.gov/waters/tmdldocs/39311_39311_MinnowCk_DO.pdf"
+      },
+      {
+        "description": "Water Footprint Network",
+        "url": "http://waterfootprint.org/en/water-footprint/glossary/"
+      }
+    ],
+    "units": "%",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "integer",
+    "values": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Key Biodiversity Area Proximity",
+    "shorthand": "Biodiversity",
+    "description": "The proximity of a RE project to a Key Biodiversity Area (KBA) recognized by the Integrated Biodiversity Assessment Tool (IBAT). KBA status is triggered by the presence of key biodiversity criteria, informed by the IUCN Red List of Threatened Species.<br>The presence of a biodiversity offset has the potential to minimize the project's net impact on the biodiversity of the region.",
+    "sources": [
+      {
+        "description": "IUCN",
+        "reference": "http://www.iucnredlist.org/"
+      },
+      {
+        "description": "Business & Biodiversity Offsets Programme",
+        "url": "http://www.forest-trends.org/documents/files/doc_3078.pdf"
+      }
+    ],
+    "unitType": "string",
+    "selector": {
+      "type": "dropdown"
+    },
+    "values": [
+      "Yes",
+      "Close in proximity",
+      "No"
+    ],
+    "points": [
+      1,
+      5,
+      10
+    ]
+  },
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Number of Species Affected",
+    "shorthand": "Species Affected",
+    "description": "The number of species estimated to be impacted by the project. The measurement will be adapted based on the inherent biodiversity of the region. The presence of a biodiversity offset has the potential to minimize the project’s net impact on the biodiversity of the region.",
+    "sources": [
+      {
+        "description": "IUCN",
+        "url": "http://www.iucnredlist.org/"
+      }
+    ],
+    "units": "quantity",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "unitType": "integer",
+    "values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "environmental",
+    "type": "output",
+    "title": "Threat Status of Species Affected",
+    "shorthand": "Species Threat",
+    "description": "The threat status of a species impacted by the project using the IUCN Red List scale. If multiple types of species are affected, the threat status for the most severely affected species is used (conservative estimate).",
+    "sources": [
+      {
+        "description": "IUCN",
+        "url": "http://www.iucnredlist.org/"
+      }
+    ],
+    "selector": {
+      "type": "dropdown"
+    },
+    "unitType": "string",
+    "values": [
+      "Critically Endangered",
+      "Endangered",
+      "Vulnerable",
+      "Near Threatened",
+      "Least Concern",
+      "No species affected"
+    ],
+    "points": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      10
+    ]
+  }
+]

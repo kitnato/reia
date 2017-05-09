@@ -1,0 +1,192 @@
+/**
+ * REIA - MIT license
+ * https://github.com/cneuro/reia
+ * client
+ * @author Chris Nater
+ * */
+
+@import url('constants.less');
+@import url('mixins.less');
+@import url('../lib/custom.bootstrap-switch.import.less');
+
+@font-face {
+  font-family: 'Michroma-Regular';
+  src: url('fonts/Michroma-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hind-light';
+  src: url('fonts/Hind-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  font-family: 'Hind-Light';
+
+  position: relative;
+  height: 100%;
+
+  cursor: default;
+
+  color: @steel;
+
+  @media (max-width: @screen-xs-min) {
+    font-size: 12px;
+  }
+  @media (min-width: @screen-sm-min) {
+    font-size: 15px;
+  }
+}
+
+h1, h2, h3, .font-michroma {
+  font-family: 'Michroma-Regular';
+}
+h2 {
+  @media (max-width: @screen-xs-min) {
+    font-size: 165%;
+  }
+  @media (min-width: @screen-sm-min) {
+    font-size: 190%;
+  }
+}
+h3 {
+  @media (max-width: @screen-xs-min) {
+    font-size: 130%;
+  }
+  @media (min-width: @screen-sm-min) {
+    font-size: 160%;
+  }
+}
+h4 {
+  @media (max-width: @screen-xs-min) {
+    font-size: 115%;
+  }
+  @media (min-width: @screen-sm-min) {
+    font-size: 135%;
+  }
+}
+h5 {
+  @media (max-width: @screen-xs-min) {
+    font-size: 110%;
+  }
+  @media (min-width: @screen-sm-min) {
+    font-size: 120%;
+  }
+}
+
+input, textarea {
+  font-family: 'Hind-Light';
+}
+
+a {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.italic {
+  .italic();
+}
+
+.container {
+  @media (min-width: 1500px) {
+    width: 1400px;
+  }
+}
+
+.section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  &:first-child {
+    padding-top: initial;
+    padding-bottom: 5px;
+  }
+  &:last-child {
+    padding-top: 5px;
+    padding-bottom: initial;
+  }
+}
+
+.pane {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.tab-pane {
+  padding: 0 5px;
+}
+
+.pane-buttons {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dropdown-menu {
+  left: initial;
+  right: 0;
+  &.visible {
+    display: block;
+    float: none;
+    position: relative;
+    width: 360px;
+    padding: 10px;
+    margin: 20px auto;
+    * {
+      float: none;
+      margin: 5px 0;
+    }
+  }
+}
+
+.tooltip {
+  font-family: 'Hind-Light';
+
+  .tooltip-inner {
+    background-color: @steel;
+  }
+  .tooltip-arrow {
+    border-bottom-color: @steel !important;
+  }
+}
+
+.animated {
+  -moz-animation-duration: 0.25s;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+}
+
+[data-toggle="popover"]:not([role="button"]) {
+  cursor: help;
+}
+
+.source {
+  .italic();
+  text-align: right;
+  font-size: 90%;
+}
+
+.popover {
+  font-family: 'Hind-Light';
+
+  &.popover-large {
+    @media (max-width: @screen-xs-min) {
+      min-width: 360px;
+    }
+    @media (min-width: @screen-sm-min) {
+      min-width: 420px;
+    }
+  }
+}
+
+.nav > li > a:hover, .nav > li > a:focus,
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  border-color: transparent;
+  background-color: @brand-primary-lighter;
+}

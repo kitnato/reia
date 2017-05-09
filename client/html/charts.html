@@ -1,0 +1,49 @@
+<template name="chartsPane">
+  {{#each charts}}
+    <div class="col-xs-12 {{fullWidth}} pane chart-container">
+      {{> chart}}
+    </div>
+  {{/each}}
+  {{#unless isEq category 'basic'}}
+    <div class="col-xs-12">
+      <h4>
+        <span data-toggle="popover" data-popover-template="descCoverage" data-trigger="hover focus">Coverage</span>
+      </h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{coveragePercent category}}" aria-valuemin="0" aria-valuemax="100" style="width: {{coveragePercent category}}%;">
+          {{coveragePercent category}}%
+        </div>
+      </div>
+    </div>
+  {{/unless}}
+</template>
+
+<template name="chart">
+  {{#if ../showLabel}}
+    <h4>{{label}}&nbsp;{{> chartDescription}}</h4>
+  {{else}}
+    {{> chartDescription}}
+  {{/if}}
+  {{#if isEq type 'widget'}}
+    <div class="widget">
+      {{> Template.dynamic template=name}}
+    </div>
+  {{else}}
+    <canvas data-chart-id="{{_id}}" class="chart chart-{{function}} {{type}}" width="{{dim.width}}" height="{{dim.height}}"></canvas>
+  {{/if}}
+  {{> chartLegend}}
+</template>
+
+<template name="chartDescription">
+  {{#if description}}
+    <a tabindex="0" role="button" data-trigger="focus" data-toggle="popover">
+      <span class="glyphicon glyphicon-question-sign"></span>
+    </a>
+  {{/if}}
+</template>
+
+<template name="chartLegend">
+  {{#if legend}}
+    <div class="chart-legend chart-legend-{{legend.orientation}} chart-legend-{{legend.spread}}"></div>
+  {{/if}}
+</template>

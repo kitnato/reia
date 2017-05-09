@@ -1,0 +1,25 @@
+<template name="tabs">
+  <div class="container tabs-{{type}}" role="tabpanel">
+    <!-- Nav tabs -->
+    <ul id="nav-categories" class="nav nav-pills nav-justified font-michroma" role="tablist">
+      {{#each withIndex (categories categoriesType) 'category'}}
+        <li role="presentation">
+          <a data-target="#tab-{{currentPage}}-{{category}}" aria-controls="tab-{{currentPage}}-{{category}}" role="tab" data-toggle="tab" data-category="{{category}}">
+            {{capitalize category}}
+            {{#if ../badge}}
+              {{> Template.dynamic template=tabBadge}}
+            {{/if}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      {{#each withIndex (categories categoriesType) 'category'}}
+        <div role="tabpanel" class="tab-pane fade" id="tab-{{currentPage}}-{{category}}" data-category="{{category}}">
+          {{> Template.dynamic template=tabContent}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</template>

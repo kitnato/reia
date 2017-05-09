@@ -1,0 +1,626 @@
+[
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Proportion of Local Jobs Created",
+    "shorthand": "Local Jobs",
+    "description": "The proportion of the number of jobs created that are allocated to the local workforce (includes temporary positions).",
+    "sources": [
+      {
+        "description": "International Labour Organisation",
+        "url": "http://www.ilo.org/empent/areas/local-economic-development-led/lang--en/index.htm"
+      }
+    ],
+    "units": "% of jobs",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 1
+    },
+    "bounds": [
+      "(or less)",
+      ""
+    ],
+    "unitType": "integer",
+    "values": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Equal Pay",
+    "description": "This metric provides insight into income inequalities. These are measured by dividing the amount paid per hour to the gender that earns less for performing a job, by the amount earned per hour by the gender of those earning more performing the same job.",
+    "sources": [
+      {
+        "description": "International Labour Organisation",
+        "url": "http://www.ilo.org/wcmsp5/groups/public/@ed_emp/@emp_ent/@multi/documents/meetingdocument/wcms_156288.pdf"
+      }
+    ],
+    "units": "% equality",
+    "selector": {
+      "type": "slider",
+      "step": 0.5,
+      "decimals": 1
+    },
+    "bounds": [
+      "(or less)",
+      ""
+    ],
+    "unitType": "float",
+    "values": [
+      77.5,
+      80,
+      82.5,
+      85,
+      87.5,
+      90,
+      92.5,
+      95,
+      97.5,
+      100
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Employee Diversity",
+    "shorthand": "Diversity",
+    "description": "The diversity of employee backgrounds in the workspace. Measured as the percentage of workers belongs to chronically underemployed populations and/or low-income communities.",
+    "sources": [
+      {
+        "description": "International Labour Organisation",
+        "url": "http://www.ilo.org/public/english/dialogue/actemp/whatwedo/projects/diversity.htm"
+      }
+    ],
+    "units": "% diversity",
+    "selector": {
+      "type": "slider",
+      "step": 0.1,
+      "decimals": 1
+    },
+    "unitType": "float",
+    "values": [
+      2.5,
+      5,
+      7.5,
+      10,
+      12.5,
+      15,
+      17.5,
+      20,
+      22.5,
+      25
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Community Benefit Programme",
+    "shorthand": "Community Benefit",
+    "description": "Specifies the project's financial benefits to the local community. This metric is expressed in either a percentage of revenue or of community payment contributed from total project investment.",
+    "sources": [
+      {
+        "description": "Green Industry Business Network",
+        "url": "http://www.ecoconnect.org.uk/download/Scottish%20Government%20Good%20Practice%20Principles%20Onshore%20Wind.pdf"
+      }
+    ],
+    "units": "%",
+    "selector": {
+      "type": "slider",
+      "step": 0.1,
+      "decimals": 1
+    },
+    "unitType": "float",
+    "values": [
+      0.5,
+      1,
+      1.5,
+      2,
+      2.5,
+      3,
+      3.5,
+      4,
+      4.5,
+      5
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Skills Training",
+    "shorthand": "Training",
+    "description": "The extent to which the project provides training for specific skills relevant to the employee’s position. Measured as the average number of training days per employee within the year.",
+    "sources": [
+      {
+        "description": "International Labour Organisation",
+        "url": "http://www.ilo.org/wcmsp5/groups/public/---ed_norm/---relconf/documents/meetingdocument/wcms_092054.pdf"
+      }
+    ],
+    "units": "days",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Lifestyle alterations",
+    "active": false,
+    "description": "Describes the project's impacts on the lifestyle of the local community across different criteria. If the local population has to alter their lifestyle in a way that significantly different from traditional practices, this can be potentially be a major disruption with a difficult adaptation process. The more direct, cumulative, permanent, irreversible, and continuous the estimated lifestyle alterations attributed to the project, the more negative the associated impact.",
+    "selector": {
+      "type": "radio"
+    },
+    "unitType": "string",
+    "radios": [
+      {
+        "label": "Immediacy",
+        "values": [
+          "Direct",
+          "Indirect"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Accumulation",
+        "values": [
+          "Cumulative",
+          "Simple"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Persistence",
+        "values": [
+          "Permanent",
+          "Temporary"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Reversibility",
+        "values": [
+          "Irreversible",
+          "Reversible"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Continuity",
+        "values": [
+          "Continuous",
+          "Non-continuous"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      }
+    ],
+    "results": {
+      "values": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "points": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ]
+    }
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Community Payment",
+    "description": "Specifies the project's financial benefits to the local community. This metric is expressed in either a percentage of revenue or of community equity in the project.",
+    "active": false,
+    "units": "% gain",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Development of Local Jobs",
+    "shorthand": "Local Jobs",
+    "description": "The development of local employment is assumed to be a positive impact on the local economy. These jobs are assumed to be additional (would not have been created without the project) and to have employees that are local to the region. The more direct, cumulative, permanent, irreversible, and continuous the estimated development of local jobs attributed to the project, the more positive the associated impact.",
+    "active": false,
+    "sources": [
+      {
+        "description": "International Labour Organisation",
+        "url": "http://www.ilo.org/empent/areas/local-economic-development-led/lang--en/index.htm"
+      }
+    ],
+    "selector": {
+      "type": "radio"
+    },
+    "unitType": "string",
+    "radios": [
+      {
+        "label": "Immediacy",
+        "values": [
+          "Direct",
+          "Indirect"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Accumulation",
+        "values": [
+          "Cumulative",
+          "Simple"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Persistence",
+        "values": [
+          "Permanent",
+          "Temporary"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Reversibility",
+        "values": [
+          "Irreversible",
+          "Reversible"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      },
+      {
+        "label": "Continuity",
+        "values": [
+          "Continuous",
+          "Non-continuous"
+        ],
+        "points": [
+          1,
+          2
+        ]
+      }
+    ],
+    "results": {
+      "values": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "points": [
+        10,
+        8,
+        6,
+        4,
+        2,
+        1
+      ]
+    }
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Safety",
+    "description": "Fatalities from severe incidents.",
+    "active": false,
+    "sources": [
+      {
+        "description": "HSE",
+        "url": "http://www.hse.gov.uk/risk/theory/alarp2.htm"
+      }
+    ],
+    "units": "fatalities per GW-year",
+    "selector": {
+      "type": "slider",
+      "decimals": 4
+    },
+    "unitType": "float",
+    "values": [
+      0.01717,
+      0.03434,
+      0.05151,
+      0.06868,
+      0.08585,
+      0.10302,
+      0.12019,
+      0.13736,
+      0.15453,
+      0.1717
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "active": false,
+    "title": "Negative Community Perception",
+    "shorthand": "Perception",
+    "description": "Describes the extent of people's negative reactions towards the project, if any. The nature of the media coverage is both a reflection as well as a forecast of the perception of the local community regarding the project. ",
+    "sources": [
+      {
+        "description": "UN Global Compact",
+        "url": "https://www.unglobalcompact.org/resources/601"
+      }
+    ],
+    "selector": {
+      "type": "dropdown"
+    },
+    "unitType": "string",
+    "values": [
+      "National",
+      "Considerable impact",
+      "Limited impact",
+      "Slight impact",
+      "No impact"
+    ],
+    "points" : [
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "descriptions": [
+      "National public concern. Extensive adverse attention in the national media. Regional/national policies with potentially restrictive measures and/or impacts on grant of consequences. Mobilisation of action groups.",
+      "Regional public concern. Extensive adverse attention in local media, Slight national media and/or local/regional political attention. Adverse stance of local government and/or action groups.",
+      "Some local public concern. Some local media and/or local political attention with potentially adverse aspects for company operations.",
+      "Public awareness may exist, but there is no public concern.",
+      "No negative public awareness."
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "title": "Taxes Paid to Regional Authority",
+    "shorthand": "Taxes Paid",
+    "active": false,
+    "description": "All payments to regional authorities, as a proportion of revenue in the last tax year.",
+    "units": "%",
+    "selector": {
+      "type": "slider",
+      "decimals": 1
+    },
+    "unitType": "float",
+    "values": [
+      5,
+      7.5,
+      10,
+      12.5,
+      15,
+      17.5,
+      20,
+      22.5,
+      25,
+      30
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Project Job Creation",
+    "description": "Indicates the total percentage of new jobs created by the project for the contracting entity.",
+    "active": false,
+    "units": "% of company jobs",
+    "selector": {
+      "type": "slider",
+      "step": 0.1,
+      "decimals": 1
+    },
+    "unitType": "integer",
+    "values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "socioeconomic",
+    "type": "input",
+    "title": "Fuel Poverty",
+    "description": "Specifies whether the project is being undertaken in an area struck by fuel poverty, and how severe the fuel poverty is within the area.",
+    "active": false,
+    "selector": {
+      "type": "dropdown"
+    },
+    "unitType": "string",
+    "values": [
+      "No fuel poverty",
+      "Marginal",
+      "Normal",
+      "Extreme"
+    ],
+    "points": [
+      1,
+      4,
+      7,
+      10
+    ]
+  }
+]

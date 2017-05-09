@@ -1,0 +1,49 @@
+/**
+ * REIA - MIT license
+ * https://github.com/cneuro/reia
+ * client
+ * @author Chris Nater
+ * */
+
+@import url('constants.less');
+
+.pane-configuration .panel {
+  &#configuration-metrics-summary .panel-body > .row {
+    &:first-child > .col-xs-3:not(:last-child),
+    &:not(:first-child) > .col-xs-3:nth-child(2),
+    &:not(:first-child) > .col-xs-3:nth-child(3) {
+      border-right: 1px solid #ccc;
+    }
+  }
+  .input-group {
+    width: 100%;
+
+    .input-group-addon {
+      width: 100px;
+    }
+  }
+  .input-group-addon.input-group-addon-alone {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .badge, .panel-heading {
+    &.metric-category-technical {
+      color: @steel;
+      background-color: @technical-yellow;
+    }
+    &.metric-category-financial {
+      color: white;
+      background-color: @financial-blue;
+    }
+    &.metric-category-environmental {
+      color: white;
+      background-color: @environmental-green;
+    }
+    &.metric-category-socioeconomic {
+      color: white;
+      background-color: @socioeconomic-red;
+    }
+  }
+}

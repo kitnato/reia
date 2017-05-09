@@ -1,0 +1,390 @@
+[
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "Annual Output",
+    "description": "The electricity generated over the course of one year.",
+    "sources": [
+      {
+        "description": "EIA",
+        "url": "http://www.eia.gov/tools/glossary/index.cfm"
+      }
+    ],
+    "units": "MWh/year",
+    "selector": {
+      "type": "slider",
+      "step": 10000,
+      "decimals": 0
+    },
+    "calculation": {
+      "equation": "technicalInputNameplateCapacity*(technicalInputCapacityFactor/100)*8760"
+    },
+    "unitType": "integer",
+    "values": [
+      100000,
+      200000,
+      300000,
+      400000,
+      500000,
+      700000,
+      900000,
+      1100000,
+      1300000,
+      1500000
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "Specific Yield",
+    "description": "The specific yield is the total annual energy generated per kWp installed.",
+    "sources": [
+      {
+        "description": "IFC",
+        "url": "http://www.ifc.org/wps/wcm/connect/topics_ext_content/ifc_external_corporate_site/ifc+sustainability/learning+and+adapting/knowledge+products/publications/publications_handbook_solarpowerplants"
+      }
+    ],
+    "units": "MWh/year",
+    "selector": {
+      "type": "slider",
+      "step": 100
+    },
+    "calculation": {
+      "equation": "technicalOutputAnnualOutput/technicalInputNameplateCapacity"
+    },
+    "unitType": "integer",
+    "values": [
+      100,
+      1000,
+      3000,
+      4000,
+      5000,
+      6000,
+      7000,
+      8000,
+      9000,
+      10000
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "active": false,
+    "title": "Capacity Value",
+    "description": "The capacity value of a power plant indicates the amount of power it can be reliably called upon to provide, and thus its ability to meet capacity demand. Capacity value is often defined in terms of the power plant's potential to contribute towards meeting peak load. For plants that provide firm power this is roughly equivalent to the rated capacity of the power plant, determined by the size of its generators.",
+    "sources": [
+      {
+        "description": "GHG Protocol",
+        "url": "http://www.ghgprotocol.org/files/ghgp/electricity_final.pdf​"
+      }
+    ],
+    "units": "% of Maximum Rated Capacity",
+    "selector": {
+      "type": "slider",
+      "step": 1,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "Transmission Voltage Level",
+    "shorthand": "TVL",
+    "description": "The extent to which the primary line or regional grid can effectively accommodate a generating asset's electrical output - measured in kilovolts (kV).",
+    "sources": [
+      {
+        "description": "U.S. Energy Information Administration",
+        "url": "http://www.eia.gov/tools/glossary/index.cfm"
+      },
+      {
+        "description": "National Grid",
+        "url": "http://www2.nationalgrid.com/UK/Industry-information/Future-of-Energy/Electricity-ten-year-statement/Current-statement/"
+      }
+    ],
+    "units": "kV",
+    "selector": {
+      "type": "slider",
+      "step": 5,
+      "decimals": 0
+    },
+    "bounds": [
+      "",
+      ""
+    ],
+    "unitType": "integer",
+    "values": [
+      50,
+      100,
+      150,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450,
+      500
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "Reduction of Dependence on Energy Imports",
+    "shorthand": "Energy Imports",
+    "type": "output",
+    "description": "If a country/region is a net importer of electricity, the project is assessed on its contribution to reducing the country/region's dependence on electricity imports. This is calculated as:<p>1 - [(Net Energy Imports – Project Energy Production) / Net Energy Imports]</p>A project with a higher capacity and load factor will result in a greater contribution to reducing dependence on energy imports in the country/region.",
+    "sources": [
+      {
+        "description": "European Environment Agency",
+        "url": "http://www.eea.europa.eu/data-and-maps/indicators/net-energy-import-dependency"
+      }
+    ],
+    "units": "%",
+    "selector": {
+      "type": "slider",
+      "step": 0.05,
+      "decimals": 2
+    },
+    "unitType": "float",
+    "values": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "System-Average Transmission & Distribution Loss",
+    "shorthand": "T&D Loss",
+    "type": "output",
+    "description": "Regional electric power T&D losses (% of output), which include losses in transmission between sources of supply and points of distribution, and in the distribution to consumers.",
+    "sources": [
+      {
+        "description": "U.S. Energy Information Administration",
+        "url": "http://www.eia.gov/tools/glossary/index.cfm"
+      },
+      {
+        "description": "World Bank",
+        "url": "http://data.worldbank.org/indicator/EG.ELC.LOSS.ZS"
+      }
+    ],
+    "bounds": [
+      "",
+      "(or more)"
+    ],
+    "units": "%",
+    "selector": {
+      "type": "slider",
+      "step": 0.5,
+      "decimals": 1
+    },
+    "unitType": "float",
+    "values": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "Demand (Load) Management",
+    "shorthand": "DL Management",
+    "active": false,
+    "description": "Reflects the current situation in the region where the electricity generating unit is located.",
+    "selector": {
+      "type": "dropdown"
+    },
+    "unitType": "string",
+    "values": [
+      "No presence of any electricity infrastructure",
+      "Outdated electricity infrastructure",
+      "Up-to-date conventional electricity infrastructure",
+      "Up-to-date conventional with planned \"smart\" electricity infrastructure",
+      "Significant presence of a \"smart\" electricity infrastructure"
+    ],
+    "points": [
+      0,
+      3,
+      5,
+      7,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "Local Fuel Availability",
+    "active": false,
+    "description": "Primarily for biomass.",
+    "units": "MWh/km<sup>2</sup>/year",
+    "selector": {
+      "type": "slider",
+      "step": 0.5,
+      "decimals": 1
+    },
+    "unitType": "float",
+    "values": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      19
+    ],
+    "points": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "category": "technical",
+    "type": "output",
+    "title": "Electricity Production per Capita",
+    "active": false,
+    "shorthand": "Electricity Production",
+    "description": "The quotient of the electricity production in Kilowatt-hours, divided by the number of inhabitants of the country where the project is located.",
+    "units": "kWh/person",
+    "selector": {
+      "type": "slider",
+      "step": 100,
+      "decimals": 0
+    },
+    "unitType": "integer",
+    "values": [
+      500,
+      1000,
+      1500,
+      2000,
+      2500,
+      3000,
+      3500,
+      4000,
+      4500,
+      5000
+    ],
+    "points": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "type": "widget",
+    "category": "summary",
+    "function": "summary",
+    "label": "Rating",
+    "order": 2,
+    "name": "ratings"
+  }
+]

@@ -1,0 +1,41 @@
+<template name="basicPane">
+  <form class="form-basic">
+    <div class="row metric">
+      <div class="col-xs-12 col-sm-6">
+        {{#each textInputs 0}}
+          {{> textInput}}
+        {{/each}}
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        {{#each textInputs 1}}
+          {{> textInput}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="row metric">
+      {{#each selectInputs}}
+        <div class="col-xs-12 col-sm-4">
+          {{> selectInput}}
+        </div>
+      {{/each}}
+    </div>
+  </form>
+</template>
+
+<template name="textInput">
+  <div class="form-group">
+    <label for="{{slugify title}}">{{title}}</label>
+    <input type="{{inputType}}" name="{{slugify title}}" class="form-control basic-input required" data-unit-type="{{unitType}}" placeholder="{{placeholder}}">
+  </div>
+</template>
+
+<template name="selectInput">
+  <label for="{{slugify title}}">{{title}}</label>
+  <select name="{{slugify title}}" data-unit-type="{{unitType}}" class="basic-input input-user required">
+    {{#each options}}
+      <option value="{{slugify title}}" selected="{{selected}}" disabled="{{disabled}}">
+        {{title}}
+      </option>
+    {{/each}}
+  </select>
+</template>

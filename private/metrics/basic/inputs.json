@@ -1,0 +1,122 @@
+[
+  {
+    "category": "basic",
+    "type": "input",
+    "title": "Project name",
+    "placeholder": "Enter a name for the project",
+    "tagType": "input",
+    "inputType": "text",
+    "unitType": "string"
+  },
+  {
+    "category": "basic",
+    "type": "input",
+    "placeholder": "Enter the location of the project",
+    "title": "Project location",
+    "tagType": "input",
+    "inputType": "text",
+    "unitType": "string"
+  },
+  {
+    "category": "basic",
+    "active": false,
+    "type": "input",
+    "title": "Primary contact name",
+    "tagType": "input",
+    "inputType": "text",
+    "unitType": "string"
+  },
+  {
+    "category": "basic",
+    "active": false,
+    "type": "input",
+    "title": "Company name",
+    "tagType": "input",
+    "inputType": "text",
+    "unitType": "string"
+  },
+  {
+    "category": "basic",
+    "active": false,
+    "type": "input",
+    "title": "Position in company",
+    "tagType": "input",
+    "inputType": "text",
+    "unitType": "string"
+  },
+  {
+    "category": "basic",
+    "active": false,
+    "type": "input",
+    "title": "Email address",
+    "tagType": "input",
+    "inputType": "email",
+    "unitType": "string"
+  },
+  {
+    "category": "basic",
+    "active": false,
+    "type": "input",
+    "title": "Phone number",
+    "tagType": "input",
+    "inputType": "text",
+    "unitType": "string"
+  },
+  {
+    "category": "basic",
+    "type": "input",
+    "title": "Technology type",
+    "tagType": "select",
+    "unitType": "string",
+    "options": [
+      {
+        "title": "Solar PV",
+        "selected": true
+      },
+      {
+        "title": "Wind"
+      },
+      {
+        "title": "Hydro"
+      }
+    ]
+  },
+  {
+    "category": "basic",
+    "type": "input",
+    "title": "Investment type",
+    "tagType": "select",
+    "unitType": "string",
+    "options": [
+      {
+        "title": "Debt only"
+      },
+      {
+        "title": "Equity only"
+      },
+      {
+        "title": "Either debt or equity",
+        "selected": true
+      }
+    ]
+  },
+  {
+    "category": "basic",
+    "type": "input",
+    "title": "Project stage",
+    "tagType": "select",
+    "unitType": "string",
+    "options": [
+      {
+        "title": "Development",
+        "selected": true
+      },
+      {
+        "title": "Construction"
+      },
+      {
+        "title": "Operation"
+      }
+    ]
+  }
+]
