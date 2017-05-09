@@ -1,0 +1,22 @@
+{
+  "name": "cneuro:reia",
+  "version": "0.0.1",
+  "description": "Renewable Energy Impact Analytics",
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cneuro/reia.git"
+  },
+  "author": "Chris Nater",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cneuro/reia/issues"
+  },
+  "homepage": "https://github.com/cneuro/reia#readme"
+}
