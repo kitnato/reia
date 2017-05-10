@@ -3,7 +3,7 @@ REIA - Renewable Energy Impact Analytics
 
 REIA is a data-driven Web-tool that allows a renewable energy (RE) project's data to be generalised, scored and visualised across different categories, outcomes and performance metrics.
 
-At its core is a [JSON](http://www.json.org/) data framework application based on international RE standards that provides a consistent assessment methodology across multiple project development stages and technology types. Its entire configuration is as extensible and malleable as it is transparent.
+At its core is a [JSON](http://www.json.org/) data framework based on international RE standards that provides a consistent assessment methodology across multiple project development stages and technology types. Its entire configuration is as extensible and malleable as it is transparent.
 
 REIA is built with [Meteor](https://www.meteor.com/) & [Bootstrap](http://getbootstrap.com/) in [Atom](https://atom.io/) according to [ES5](https://es5.github.io/) specifications.
 
@@ -33,11 +33,11 @@ The fundamental concepts that REIA codifies into the framework. For more detaile
 
 A project's isolated, pre-defined, discretized set of data. The values a metric has can by definition be mapped to a linear function. Metric values can take the form of numbers corresponding to a unit, or any discrete, finite dataset. Metrics are a core configurable aspect and are by design highly extensible.
 
-A metric can score from 0 (worst performance/outcome) to 10 (best). There are currently 51 metrics across all categories.
+A metric can score from 0 (worst performance/outcome) to 10 (best). v0.1 currently comprises 51 metrics across all categories.
 
 > For example, technical metric "Nameplate Capacity" is a number in the range of 1 to 500 in MW, while environmental metric "Impact on Local Landscape" takes the form of a nested radio list of choices.
 
-Metrics are defined in `private/metrics/` by category folder. Also see **Further development**.
+Metrics are defined in `private/metrics/` by category folder. Also see [Further development](#further-development).
 
 #### Input
 
@@ -56,12 +56,13 @@ A calculation is expressed as an algebraic combination of other metrics and cons
 `[categoryName][metricType][metricName][OPERATION]...`
 
 > For example, the calculation for "Annual Output" is defined as:
-
-> `technicalInputNameplateCapacity*(technicalInputCapacityFactor/100)*8760`
+```
+technicalInputNameplateCapacity*(technicalInputCapacityFactor/100)*8760
+```
 
 #### Activation
 
-To facilitate the re-use and aggregation of metrics as a comprehensive database, metrics can individually be activated or deactivated, including or excluding them completely from all evaluations of a particular project. Also see **Category Coverage**.
+To facilitate the re-use and aggregation of metrics as a comprehensive database, metrics can individually be activated or deactivated, including or excluding them completely from all evaluations of a particular project. Also see [Category Coverage](#coverage).
 
 #### Weight
 
@@ -120,7 +121,7 @@ Based on the arithmetic mean score of a category's activated metrics according t
 
 > For example, a category scoring 5.4 translates to a rating of C-, while a score of 8.6 is a B+.
 
-The project's overall rating is the linear arithmetic mean of all the category's ratings. Also see **Further development**.
+The project's overall rating is the linear arithmetic mean of all the category's ratings. Also see [Further development](#further-development).
 
 ### Chart
 
