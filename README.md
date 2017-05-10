@@ -16,10 +16,10 @@ An attempt at an open-source, community-driven standards framework, REIA aims to
 ### Core pillars
 
 1. **Configurable** - Every input or output metric can be configured in terms of (in sequence):
-  1. how its data, sources and outcome are defined,
-  1. if it is activated in the category (or not),
-  1. how it is scored across its spectrum of possible values, and
-  1. how it is weighted as a whole in the category with respect to that category's other metrics.
+   1. how its data, sources and outcome are defined,
+   1. if it is activated in the category (or not),
+   1. how it is scored across its spectrum of possible values, and
+   1. how it is weighted as a whole in the category with respect to that category's other metrics.
 1. **Automatable** - every output can by definition be automated using the project's inputs with a custom calculation syntax, allowing for complex computable interactions between metrics.
 1. **Transparent** - every metric and category score is dependent on what metrics are activated and how they are weighted, allowing a project to be rated according to its individual requirements whilst providing full disclosure of the methodology.
 
