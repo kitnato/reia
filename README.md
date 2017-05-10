@@ -144,8 +144,8 @@ As of v0.1, useful additions include:
 - Allowing for more flexible, auto-mapped rating scales based on a range of values rather than a finite set
 - User accounts system to allow in-app saving of configuration and projects
 - Validation:
- - activated, automated outputs can never take into account deactivated inputs
- - validation of custom weights (UI-driven for best outcome)
+  - activated, automated outputs can never take into account deactivated inputs
+  - validation of custom weights (UI-driven for best outcome)
 - Full code documentation
 
 > There is no reason why REIA can't be extended to also include non-renewable technology types. It's would be a matter of including the appropriate metrics and broadening the focus. In addition, a system could be implemented to systematically exclude certain metrics based on the selected technology type without affecting coverage.
