@@ -6,6 +6,7 @@
  * */
 
 @import url('constants.less');
+@import url('mixins.less');
 
 .pane-configuration .panel {
   &#configuration-metrics-summary .panel-body > .row {
@@ -16,19 +17,22 @@
     }
   }
   .badge, .panel-heading {
-    color: white;
+    .bold();
 
     &.metric-category-technical {
       color: @steel;
       background-color: @technical-yellow;
     }
     &.metric-category-financial {
+      color: white;
       background-color: @financial-blue;
     }
     &.metric-category-environmental {
+      color: white;
       background-color: @environmental-green;
     }
     &.metric-category-socioeconomic {
+      color: white;
       background-color: @socioeconomic-red;
     }
   }
