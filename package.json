@@ -1,6 +1,6 @@
 {
   "name": "cneuro:reia",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Renewable Energy Impact Analytics",
   "dependencies": {
     "babel-runtime": "^6.23.0"

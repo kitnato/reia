@@ -15,6 +15,61 @@
       border-right: 1px solid #ccc;
     }
   }
+  .badge, .panel-heading {
+    color: white;
+
+    &.metric-category-technical {
+      color: @steel;
+      background-color: @technical-yellow;
+    }
+    &.metric-category-financial {
+      background-color: @financial-blue;
+    }
+    &.metric-category-environmental {
+      background-color: @environmental-green;
+    }
+    &.metric-category-socioeconomic {
+      background-color: @socioeconomic-red;
+    }
+  }
+  &.deactivated .panel-heading {
+    &.metric-category-technical {
+      background: repeating-linear-gradient(
+        -55deg,
+        @technical-yellow,
+        @technical-yellow 10px,
+        darken(@technical-yellow, 15%) 10px,
+        darken(@technical-yellow, 15%) 20px
+      );
+    }
+    &.metric-category-financial {
+      background: repeating-linear-gradient(
+        -55deg,
+        @financial-blue,
+        @financial-blue 10px,
+        darken(@financial-blue, 10%) 10px,
+        darken(@financial-blue, 10%) 20px
+      );
+    }
+    &.metric-category-environmental {
+      background: repeating-linear-gradient(
+        -55deg,
+        @environmental-green,
+        @environmental-green 10px,
+        darken(@environmental-green, 10%) 10px,
+        darken(@environmental-green, 10%) 20px
+      );
+    }
+    &.metric-category-socioeconomic {
+      background: repeating-linear-gradient(
+        -55deg,
+        @socioeconomic-red,
+        @socioeconomic-red 10px,
+        darken(@socioeconomic-red, 12%) 10px,
+        darken(@socioeconomic-red, 12%) 20px
+      );
+    }
+  }
   .input-group {
     width: 100%;
 
@@ -26,24 +81,5 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 10px;
-  }
-
-  .badge, .panel-heading {
-    &.metric-category-technical {
-      color: @steel;
-      background-color: @technical-yellow;
-    }
-    &.metric-category-financial {
-      color: white;
-      background-color: @financial-blue;
-    }
-    &.metric-category-environmental {
-      color: white;
-      background-color: @environmental-green;
-    }
-    &.metric-category-socioeconomic {
-      color: white;
-      background-color: @socioeconomic-red;
-    }
   }
 }

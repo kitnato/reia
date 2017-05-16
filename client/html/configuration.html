@@ -26,11 +26,9 @@
   {{#each metricTypes}}
     <h4 style="margin: 2em 0 1em 0;">{{capitalize this}}s</h4>
     {{#each metrics ../category this}}
-      <div class="panel panel-default">
+      <div class="panel panel-default {{#if isEq active false}}deactivated{{/if}}">
         {{> configurationMetricsPanelTitle}}
-        {{#if active}}
-          {{> configurationMetricsPanelBody}}
-        {{/if}}
+        {{> configurationMetricsPanelBody}}
       </div>
     {{/each}}
   {{/each}}
@@ -118,10 +116,12 @@
 
 <template name="configurationMetricsPanelTitle">
   <div class="panel-heading metric-category-{{category}}">
-    <div class="panel-title">
+    <div class="panel-title bold">
       {{title}}
       {{#if isEq active false}}
-        [DEACTIVATED]
+        <div class="pull-right">
+          <span class="glyphicon glyphicon-ban-circle" aria-hidden="true" data-toggle="popover" data-trigger="hover focus" data-content="Deactivated" data-placement="left"></span>
+        </div>
       {{/if}}
     </div>
   </div>
