@@ -3,7 +3,7 @@ REIA - Renewable Energy Impact Analytics
 
 REIA is a data-driven Web-tool that allows a renewable energy (RE) project's data to be generalised, scored and visualised across different categories, outcomes and performance metrics.
 
-At its core is a [JSON](http://www.json.org/) data framework based on international RE standards that provides a consistent assessment methodology across multiple project development stages and technology types. Its entire configuration is as extensible and malleable as it is transparent.
+At its core is a [JSON](http://www.json.org/) data framework built on international RE standards that provides a reusable blueprint across multiple project development stages and technology types. Its entire configuration is as extensible and malleable as it is transparent.
 
 REIA is built with [Meteor](https://www.meteor.com/) & [Bootstrap](http://getbootstrap.com/) in [Atom](https://atom.io/) according to [ES5](https://es5.github.io/) specifications.
 
@@ -11,7 +11,7 @@ The `master` branch is live on http://reia.io.
 
 ## Why?
 
-An attempt at an open-source, community-driven standards framework, REIA aims to facilitate RE developers in assessing relevant impacts of their project according to their own requirements efficiently while retaining consistency of methodology.
+An attempt at an open-source, community-driven standards framework, REIA aims to facilitate RE developers in assessing relevant impacts of their project according to their own priorities efficiently while retaining consistency of methodology.
 
 ### Core pillars
 
