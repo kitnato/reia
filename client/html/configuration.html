@@ -190,9 +190,9 @@
 </template>
 
 <template name="configurationMetricsScoringForm">
-  {{#if isEq selector.type 'slider'}}
-    <div class="metric-configuration-scoring">
-      <div class="col-xs-5">
+  <div class="metric-configuration-scoring">
+    <div class="row">
+      <div class="col-xs-6">
         <div class="form-group">
           <span class="input-group-addon input-group-addon-alone" data-toggle="popover" data-popover-template="descValues" data-placement="bottom" data-trigger="hover focus">Values</span>
         </div>
@@ -203,25 +203,46 @@
           <span class="input-group-addon input-group-addon-alone" data-toggle="popover" data-popover-template="descPoints" data-placement="bottom" data-trigger="hover focus">Points</span>
         </div>
       </div>
-      {{#each withIndex values}}
-        <div class="col-xs-5">
+    </div>
+    {{#if isEq selector.type 'radio'}}
+      {{#each radios}}
+        <div class="well">
           <div class="form-group">
-            <input type="number" value="{{value}}" class="form-control text-center" disabled="disabled">
-          </div>
-        </div>
-        <div class="col-xs-1">
-          <div style="padding-top: 5px;">
-            <span class="glyphicon glyphicon-resize-horizontal"></span>
-          </div>
-        </div>
-        <div class="col-xs-5">
-          <div class="form-group">
-            <input type="number" value="{{points}}" class="form-control text-center" disabled="disabled">
+            <label>{{label}}</label>
+            {{#each withIndex values}}
+              {{> configurationMetricsScoringFormRow}}
+            {{/each}}
           </div>
         </div>
       {{/each}}
+    {{else}}
+      {{#each withIndex values}}
+        {{> configurationMetricsScoringFormRow}}
+      {{/each}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="configurationMetricsScoringFormRow">
+  <div class="row">
+    <div class="col-xs-6">
+      {{#if isEq unitType 'string'}}
+        <textarea class="form-control" disabled="disabled">{{value}}</textarea>
+      {{else}}
+        <input type="number" value="{{value}}" class="form-control text-center" disabled="disabled">
+      {{/if}}
     </div>
-  {{/if}}
+    <div class="col-xs-1">
+      <div style="padding-top: 5px;">
+        <span class="glyphicon glyphicon-resize-horizontal"></span>
+      </div>
+    </div>
+    <div class="col-xs-5">
+      <div class="form-group">
+        <input type="number" value="{{points}}" class="form-control text-center" disabled="disabled">
+      </div>
+    </div>
+  </div>
 </template>
 
 <template name="descTitle">

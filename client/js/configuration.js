@@ -44,7 +44,10 @@ Template.configurationTabContent.helpers({
   }
 });
 
-Template.configurationMetricsScoringForm.helpers({
+Template.configurationMetricsScoringFormRow.helpers({
+  'unitType': function () {
+    return Template.parentData().unitType || Template.parentData(2).unitType;
+  },
   'points': function () {
     return Template.parentData().points[this.index];
   }
