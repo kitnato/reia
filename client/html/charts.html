@@ -7,7 +7,11 @@
   {{#unless isEq category 'basic'}}
     <div class="col-xs-12">
       <h4>
-        <span data-toggle="popover" data-popover-template="descCoverage" data-trigger="hover focus">Coverage</span>
+        <span data-toggle="popover" data-popover-template="descCoverage" data-trigger="hover focus">
+          <span class="glyphicon glyphicon-dashboard"></span>
+          &nbsp;
+          Coverage
+        </span>
       </h4>
       <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="{{coveragePercent category}}" aria-valuemin="0" aria-valuemax="100" style="width: {{coveragePercent category}}%;">
@@ -46,4 +50,8 @@
   {{#if legend}}
     <div class="chart-legend chart-legend-{{legend.orientation}} chart-legend-{{legend.spread}}"></div>
   {{/if}}
+</template>
+
+<template name="descCoverage">
+  Coverage refers to the percentage of active metrics for this project compared to all available metrics in that category. The summary tab coverage is all active metrics compared to total available metrics across all categories.
 </template>

@@ -24,7 +24,10 @@
 
 <template name="configurationTabContent">
   {{#each metricTypes}}
-    <h4 style="margin: 2em 0 1em 0;">{{capitalize this}}s</h4>
+    <h4 style="margin: 2em 0 1em 0;">
+      {{> metricTypeIcon type=this}}
+      {{capitalize this}}s
+    </h4>
     {{#each metrics ../category this}}
       <div class="panel panel-default {{#if isEq active false}}deactivated{{/if}}">
         {{> configurationMetricsPanelTitle}}
@@ -117,6 +120,7 @@
 <template name="configurationMetricsPanelTitle">
   <div class="panel-heading metric-category-{{category}}">
     <div class="panel-title">
+      {{> metricTypeIcon type=type}}
       {{title}}
       {{#if isEq active false}}
         <div class="pull-right">

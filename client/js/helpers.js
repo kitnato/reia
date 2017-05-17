@@ -45,6 +45,9 @@ Template.registerHelper('metrics', function (category, type, active) {
     _.isBoolean(active) ? { 'active': (active ? {'$ne': false} : false) } : {}
   );
 });
+Template.registerHelper('metricTypes', function () {
+  return ['input', 'output'];
+});
 Template.registerHelper('collectionCount', function (collection) {
   return !collection ? 0 : (_.isArray(collection) ? collection.length : collection.count());
 });

@@ -36,9 +36,6 @@ Template.configurationTabContent.helpers({
   'active': function () {
     return this.active !== false;
   },
-  'metricTypes': function () {
-    return ['input', 'output'];
-  },
   'tabContentData': function () {
     return Template.parentData();
   }

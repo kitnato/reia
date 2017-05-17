@@ -1,17 +1,16 @@
 <template name="metricsPane">
   <form class="form-inline form-{{category}}">
-    <div class="col-xs-12 col-sm-6 metric-inputs">
-      <h4>Inputs</h4>
-      {{#each metrics category 'input' true}}
-        {{> metric}}
-      {{/each}}
-    </div>
-    <div class="col-xs-12 col-sm-6 metric-outputs">
-      <h4>Outputs</h4>
-      {{#each metrics category 'output' true}}
-        {{> metric}}
-      {{/each}}
-    </div>
+    {{#each metricTypes}}
+      <div class="col-xs-12 col-sm-6 metric-inputs">
+        <h4>
+          {{> metricTypeIcon type=this}}
+          {{capitalize this}}s
+        </h4>
+        {{#each metrics ../category this true}}
+          {{> metric}}
+        {{/each}}
+      </div>
+    {{/each}}
   </form>
 </template>
 
@@ -94,6 +93,11 @@
   </div>
 </template>
 
-<template name="descCoverage">
-  Coverage refers to the percentage of active metrics for this project compared to all available metrics in that category. The summary tab coverage is all active metrics compared to total available metrics across all categories.
+<template name="metricTypeIcon">
+  {{#if isEq type 'input'}}
+    <span class="glyphicon glyphicon-log-in"></span>
+  {{else}}
+    <span class="glyphicon glyphicon-log-out"></span>
+  {{/if}}
+  &nbsp;
 </template>
