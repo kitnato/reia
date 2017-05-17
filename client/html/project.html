@@ -43,7 +43,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <strong>Notice - </strong>Manual metrics in this category are initialised to default values.
+        <strong>Notice - </strong>Each manual metric in this category is initialised to the median value of its range to reflect an average-scoring project.
       </div>
       <div class="pane pane-charts">
         {{> chartsPane}}
@@ -104,35 +104,38 @@
 
 <template name="howToUseProject">
   <p>
-    If a category tab has a <span class="glyphicon glyphicon-exclamation-sign"></span> badge, it is yet to be visited and at least initialised so that the category contributes to the rating (<span class="glyphicon glyphicon-ok-sign"></span>).
+    If a category tab has a <span class="glyphicon glyphicon-exclamation-sign"></span> badge, it needs to be initialised by visiting it so that the category contributes to the rating (<span class="glyphicon glyphicon-ok-sign"></span>).
+  </p>
+  <p>
+    For more information, please refer to the <a href="https://github.com/cneuro/reia#readme">README on Github</a>.
   </p>
   <h5>
     Metrics
   </h5>
+  <p>
+    Hover over or tap a metric title for its description and source(s).
+  </p>
   <ul>
-    <p>
-      Hover over or tap each metric title for an explanation of the input, along with its source(s).
-    </p>
-    <li>Inputs &amp; manual outputs</li>
+    <li>Input metrics &amp; manual output metrics</li>
     <ul>
-      <li>Adjust sliders or input numeric values manually by clicking or tapping on a number label.</li>
-      <li>Click or tap appropriate option in a radio selector.</li>
+      <li>Adjust sliders or enter numeric values in the number field.</li>
+      <li>Select appropriate option in a radio selector.</li>
       <li>Choose from available options in a drop-down menu.</li>
-      <li>Output metrics frozen in "Manual" do not have an automatable formula.</li>
+      <li>Outpus frozen in "Manual" do not have an automatable calculation.</li>
     </ul>
-    <li>Automated outputs</li>
+    <li>Automated output metrics</li>
     <ul>
-      <li>Metrics that can be readily automated default to "Auto" mode.</li>
-      <li>Metrics in Auto mode are recalculated in real-time as other metrics are changed.</li>
-      <li>To switch between Auto or Manual mode, tap or click the switch next to the metric title.</li>
+      <li>Outputs with a defined calculation default to "Auto" mode.</li>
+      <li>Outputs in Auto mode are calculated in real-time as other metrics are changed.</li>
+      <li>To switch between modes, use the switch next to the metric title.</li>
     </ul>
   </ul>
 
   <h5>Scoring &amp; Ratings</h5>
   <p>
-    All metrics in each of the four category tabs are scored from 1 to 10, with 10 having the highest estimated net-positive return on investment in that category based on the current configuration.
+    All metrics in each of the four category tabs are scored from 1 to 10, with 10 having the highest estimated net-positive impact in that category based on the current configuration.
   </p>
   <p>
-    The Summary tab shows gives a single score per category, similarly from 1 to 10. There is also a rating for each category ranging from "A" to "F", with A signifying an estimated highly desirable outcome in that category, and F signaling room for improvement.
+    The Summary tab shows gives a single score per category, also from 1 to 10. This informs the rating for each category ranging from "A" to "F", with A signifying an estimated highly desirable outcome in that category, and F signaling room for improvement.
   </p>
 </template>

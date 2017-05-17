@@ -148,10 +148,10 @@ As of v0.1, useful additions include:
   - validation of custom weights (UI-driven for best outcome)
 - Full code documentation
 
-> There is no reason why REIA can't be extended to also include non-renewable technology types. It's would be a matter of including the appropriate metrics and broadening the focus. In addition, a system could be implemented to systematically exclude certain metrics based on the selected technology type without affecting coverage.
+> There is no reason why REIA can't be extended to also include non-renewable technology types. It would be a matter of including the appropriate metrics and broadening the focus. In addition, a system could be implemented to systematically exclude certain metrics based on the selected technology type without affecting coverage.
 
 ## About
 
-The concepts behind REIA were devised by [Phillip Bruner](https://www.linkedin.com/in/pbruner/) and developed by [Chris Nater](https://www.linkedin.com/in/cnater/) in collaboration with several industry professionals, institutions and academic experts.
+REIA was devised by [Phillip Bruner](https://www.linkedin.com/in/pbruner/) in collaboration with several industry professionals, institutions and academic experts. The app was developed by [Chris Nater](https://www.linkedin.com/in/cnater/).
 
 REIA is licensed under the MIT license, see `LICENSE`.
