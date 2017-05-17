@@ -152,6 +152,6 @@ As of v0.1, useful additions include:
 
 ## About
 
-REIA was devised by [Phillip Bruner](https://www.linkedin.com/in/pbruner/) in collaboration with several industry professionals, institutions and academic experts. The app was developed by [Chris Nater](https://www.linkedin.com/in/cnater/).
+REIA was devised by [Phillip Bruner](https://www.linkedin.com/in/pbruner/) in collaboration with several industry professionals, institutions and academic experts. The app was designed and developed by [Chris Nater](https://www.linkedin.com/in/cnater/).
 
 REIA is licensed under the MIT license, see `LICENSE`.
