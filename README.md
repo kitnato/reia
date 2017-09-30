@@ -7,8 +7,6 @@ At its core is a [JSON](http://www.json.org/) data framework built on internatio
 
 REIA is built with [Meteor](https://www.meteor.com/) & [Bootstrap](http://getbootstrap.com/) in [Atom](https://atom.io/) according to [ES5](https://es5.github.io/) specifications.
 
-The `master` branch is live on http://reia.io.
-
 ## Why?
 
 An attempt at an open-source, community-driven standards framework, REIA aims to facilitate RE developers in assessing relevant impacts of their project according to their own priorities efficiently while retaining consistency of methodology.
