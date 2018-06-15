@@ -5,7 +5,9 @@ REIA is a data-driven Web-tool that allows a renewable energy (RE) project's dat
 
 At its core is a [JSON](http://www.json.org/) data framework built on international RE standards that provides a reusable blueprint across multiple project development stages and technology types. Its entire configuration is as extensible and malleable as it is transparent.
 
-REIA is built with [Meteor](https://www.meteor.com/) & [Bootstrap](http://getbootstrap.com/) in [Atom](https://atom.io/) according to [ES5](https://es5.github.io/) specifications.
+REIA is built with [Meteor](https://www.meteor.com/) & [Bootstrap](http://getbootstrap.com/) according to [ES5](https://es5.github.io/) specifications.
+
+The `master` branch is live on http://reia.io.
 
 ## Why?
 
@@ -133,6 +135,9 @@ Serves to visualise scores and ratings for metrics and categories. Charts are de
 
 As of v0.1, useful additions include:
 
+- Upgrade to latest Meteor & refactor to ES6 standards
+- Upgrade libraries and Bootstrap
+- Replace Blaze with React
 - Extending the UI so that configuration can be done completely on the front-end instead of having to change JSON files manually
 - Making the environmental & socioeconomic categories more robust
 - Functionality for exporting a detailed JSON file and (ultimately) PDF of a project and its configuration
